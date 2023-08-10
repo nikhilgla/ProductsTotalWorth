@@ -11,7 +11,7 @@ myForm.addEventListener('submit', onSubmit);
 var total = Number("0");
 
 window.addEventListener('DOMContentLoaded', () => {
-    axios.get('https://crudcrud.com/api/55426f4feb414de19ceaeb8bf1c1fe93/productsData')
+    axios.get('https://crudcrud.com/api/2a3e0df20bbc4069b7201733fa7d1a43/productsData')
         .then((ele) => {
             console.log(ele);
 
@@ -33,7 +33,7 @@ async function onSubmit(e) {
         amount: amount.value
     }
     
-        await axios.post('https://crudcrud.com/api/55426f4feb414de19ceaeb8bf1c1fe93/productsData', myObj)
+        await axios.post('https://crudcrud.com/api/2a3e0df20bbc4069b7201733fa7d1a43/productsData', myObj)
             .then((ele) => {
                 console.log(ele.data);
                 showOnScreen(ele.data)
@@ -64,7 +64,7 @@ async function deleteExp(name, id ,amount) {
     const childtotal = `<h3>Total Value worth of Products : ${this.total}</h3>`;
     tot.innerHTML = childtotal;
 
-    await axios.delete(`https://crudcrud.com/api/55426f4feb414de19ceaeb8bf1c1fe93/productsData/${id}`)
+    await axios.delete(`https://crudcrud.com/api/2a3e0df20bbc4069b7201733fa7d1a43/productsData/${id}`)
         .then((ele) => { console.log(ele) })
         .catch((err) => { console.log(err); });
 }
